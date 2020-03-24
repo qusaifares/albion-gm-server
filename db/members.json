@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "1",
+    "playerId": "2222",
+    "playerName": "",
+    "isGuildMember": false
+  },
+  {
+    "_id": "2",
+    "playerId": "1313",
+    "playerName": "",
+    "isGuildMember": false
+  }
+]
