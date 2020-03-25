@@ -6,6 +6,7 @@ const BadMessageSchema = new mongoose.Schema({
   discordTag: { type: String },
   channel: { type: String },
   content: { type: String },
+  words: { type: Array },
   datePosted: { type: Date, default: Date.now }
 });
 

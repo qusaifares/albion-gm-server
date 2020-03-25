@@ -8,14 +8,21 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  const member = await Member.find({ _id: req.params.id }).populate(
-    'badMessages'
-  );
+  const member = await Member.findById(req.params.id).populate('badMessages');
   res.json(member);
 });
 
 router.post('/new', async (req, res) => {
   const member = await Member.create(req.body);
+  res.json(member);
+});
+
+router.put('/:id/edit', async (req, res) => {
+  const member = await Member.findOneAndUpdate(
+    { _id: req.params.id },
+    { $set: req.body },
+    { returnOriginal: false }
+  );
   res.json(member);
 });
 
